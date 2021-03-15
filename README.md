@@ -1,4 +1,6 @@
 <!--
+-->
+
 This project shall include all information regarding building your own smart contracts on a blockchain and visualize via app.
 The following tools are used and shall be described within this README file:
     - Smart contracts | Ethereum | Solidity
@@ -6,9 +8,6 @@ The following tools are used and shall be described within this README file:
     - Trufflesuit as development environment (see https://www.trufflesuite.com/)
     - Testing framework with Mocha and Chai (see https://mochajs.org/ & https://www.chaijs.com/)
     - Dapp with Reactjs & Drizzle libraries (see https://de.reactjs.org/ && https://www.trufflesuite.com/docs/drizzle/overview)
-
-
--->
 
 # React Description
 
