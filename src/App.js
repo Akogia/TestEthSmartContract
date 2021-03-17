@@ -2,6 +2,12 @@ import logo from './logo512.png'
 import React, {Component} from 'react'
 import './App.css'
 import Web3 from 'web3'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Navbar from 'react-bootstrap/Navbar'
+import Card from 'react-bootstrap/Card'
+import ListGroup from 'react-bootstrap/ListGroup'
+import Identicon from 'identicon.js'
+//import MetaCoin from '../build/contracts/MetaCoin.json'
 
 class App extends Component {
 
@@ -47,7 +53,42 @@ class App extends Component {
   }
 
   render () {return (
+
     <div className="App">
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">
+          <img
+            alt=""
+            src="./logo512.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />{' '}
+          This is our project
+        </Navbar.Brand>
+        <p>{this.state.account}</p>
+      </Navbar>
+      <div><br></br>
+        <p>
+          <Card style={{ width: '60rem', margin: 'auto' }} bg="dark" classname="App">
+            <ListGroup variant="flush">
+              <ListGroup.Item>Account address: {this.state.account}
+               {this.state.account? <img
+                className= "ml-2"
+                width= '30'
+                height= '30'
+                src ={`data:image/png;base64,${new Identicon(this.state.account, 30).toString()}`}
+                alt=""
+                />
+                :<span></span>
+               }
+              </ListGroup.Item>
+              <ListGroup.Item>Account Balance: {this.state.ethBalance} WEI </ListGroup.Item>
+              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            </ListGroup>
+          </Card>
+        </p>
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
